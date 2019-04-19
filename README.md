@@ -64,7 +64,7 @@ This is how the result would look like.
 
 ***Data Plot***
 
-This plot is developped with an R code ***DataViz.R*** wich exists in ***DataClustering/scripts/R_Script***
+This plot is developped with an R code ***dataViz.R*** wich exists in ***DataClustering/scripts/R_Script***
 
 ![Data Plot](https://github.com/mskanji/Brustol_CityBike/blob/master/Map.png)
 
