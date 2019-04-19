@@ -66,5 +66,5 @@ This is how the result would look like.
 
 This plot is developped with an R code ***DataViz.R*** wich exists in ***DataClustering/scripts/R_Script***
 
-![Data Plot](https://github.com/nackachy/DataClustering/blob/master/Map.png)
+![Data Plot](https://github.com/mskanji/Brustol_CityBike/blob/master/Map.png)
 
