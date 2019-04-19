@@ -1,14 +1,14 @@
 # Brustol_CityBike
 
 The main goal of this project is to propose a clustoring of Brustol city Bike  according to the location bike stations.
-In production, this code should be launched daily on 10 GB of data, the choice of the platform being up to you to decide that it can be run on a Spark cluster or a cluster Kubernetes or Azure.
+In production, this code should be launched daily on 10 GB of data. 
 
 ## Requirements
 
 * [Java 8](https://www.java.com/fr/download/faq/java8.xml)
-* [Scala 2.11.7](https://www.scala-lang.org/download/2.11.7.html)
+* [Scala 2.11.8](https://www.scala-lang.org/download/2.11.7.html)
 * [SBT 1.2.8](https://piccolo.link/sbt-1.2.8.zip)
-* [Spark 2.1.0](https://spark.apache.org/releases/spark-release-2-1-0.html)
+* [Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-1-0.html)
 
 ## Steps
 
@@ -24,25 +24,13 @@ In production, this code should be launched daily on 10 GB of data, the choice o
 
 The program needs somme properties to be executed. These properties are saved in ***config/application.properties***.
 
-    inputData=
-    inputClusterNumber=
-    master=
-    appName=
-    nameOfColumnCluster=
-    outputData=
-    outputFileName=
-    outputFileFormat=
-
-* **inputData** : Path of the data to be clustered.
-* **inputClusterNumber** : Cluster number to use in cluster.
-* **master** : The master URL for the cluster.
-* **appName** : Application name.
-* **nameOfColumnCluster** : Name of the new column wich contains the clusters.
-* **outputData** : Path where to save the clustered data.
-* **outputFileName** : Name of the clustered data.
-* **outputFileFormat** : Format of the clustered data to be saved
-* **outPutData** is the path where clustered Data will be saved.
-* **fileOutPutName** is the name chosen for outputData.
+   DATA_INPUT_PATH=
+   OUTPUT_PATH=
+   NB_CLUSTER=
+   
+* **DATA_INPUT_PATH** : Path of the data to be clustered.
+* **OUTPUT_PATH** : Path where to save the clustered data.
+* **NB_CLUSTER** : Number of clusters.
 
 ## Running project on YARN
 
@@ -54,16 +42,15 @@ This will produce a jar containing the compiled project
 
 Then you can submit the job using **spark-submit** in the **shell file**:
    
-    cd DataClustering/scripts/shell
+    cd Brustol_CityBike/lib/shell
     chmod +x spark-submit.sh
     ./spark-submit.sh
 
 ##Project architecture
 
-  DataClustering/DataInput                                                                    
-  DataClustering/DataOutput                                                                   
-  DataClustering/config                                                                       
-  DataClustering/scripts   
+  Brustol_CityBike/Output                                                                   
+  Brustol_CityBike/Config                                                                       
+  Brustol_CityBike/lib   
 
 ## Results
 
