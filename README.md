@@ -22,15 +22,17 @@ In production, this code should be launched daily on 10 GB of data.
 
 ## Configuration
 
-The program needs somme properties to be executed. These properties are saved in ***config/application.properties***.
+The program needs somme properties to be executed. These properties are saved in ***config/config.properties***.
 
-   DATA_INPUT_PATH=
-   OUTPUT_PATH=
-   NB_CLUSTER=
+    DATA_INPUT_PATH=
+   
+    OUTPUT_PATH=
+   
+    NB_CLUSTER=
    
 * **DATA_INPUT_PATH** : Path of the data to be clustered.
 * **OUTPUT_PATH** : Path where to save the clustered data.
-* **NB_CLUSTER** : Number of clusters.
+* **NB_CLUSTER** : Number of clusters of Kmeans clustering.
 
 ## Running project on YARN
 
@@ -46,7 +48,7 @@ Then you can submit the job using **spark-submit** in the **shell file**:
     chmod +x spark-submit.sh
     ./spark-submit.sh
 
-##Project architecture
+## Project architecture
 
   Brustol_CityBike/Output                                                                   
   Brustol_CityBike/Config                                                                       
@@ -64,7 +66,7 @@ This is how the result would look like.
 
 ***Data Plot***
 
-This plot is developped with an R code ***dataViz.R*** wich exists in ***DataClustering/scripts/R_Script***
+This plot is developped with an R code ***dataViz.R*** wich exists in ***Brustol_CityBike/lib***
 
 ![Data Plot](https://github.com/mskanji/Brustol_CityBike/blob/master/Map.png)
 
