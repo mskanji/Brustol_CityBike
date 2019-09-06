@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaSbtSettings">
-    <option name="customVMPath" />
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="/usr/lib/jvm/java-8-openjdk-amd64" />
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -12,8 +13,10 @@
           </set>
         </option>
         <option name="sbtVersion" value="1.2.8" />
-        <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
       </SbtProjectSettings>
     </option>
+    <option name="maximumHeapSize" value="2500" />
+    <option name="vmParameters" value="-Xmx8g -Xss16M -XX:+CMSClassUnloadingEnabled -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=4 -XX:ConcGCThreads=4 -XX:InitiatingHeapOccupancyPercent=50" />
   </component>
 </project>
